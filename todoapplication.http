@@ -1,0 +1,58 @@
+# API 1
+    # Scenario 1
+    # Returns a list of all todos whose status is 'TO DO'
+GET http://localhost:3008/todos/?status=TO%20DO
+
+###
+    //Scenario 2
+//Returns a list of all todos whose priority is 'HIGH'
+
+
+GET http://localhost:3008/todos/?priority=HIGH
+
+
+
+###
+    //Scenario 3
+    //Returns a list of all todos whose priority is 'HIGH' and status is 'IN PROGRESS'
+GET http://localhost:3008/todos/?priority=HIGH&status=IN%20PROGRESS
+
+
+###
+//API 2
+//Returns a specific todo based on the todo ID
+
+GET  http://localhost:3008/todos/
+
+###
+//API 3
+//Create a todo in the todo table
+
+POST  http://localhost:3008/todos/
+Content-Type: application/json
+
+{
+  "id": 15,
+  "todo": " event ",
+  "priority": "MEDIUM",
+  "status": "IN PROGRESS"
+}
+
+###
+//API4
+//Updates the details of a specific todo based on the todo ID
+
+PUT http://localhost:3008/todos/15/
+Content-Type: application/json
+
+{ "todo": "Some task" }
+
+
+###
+//API 5
+//Deletes a todo from the todo table based on the todo ID
+
+DELETE http://localhost:3008/todos/12/
+
+
+
